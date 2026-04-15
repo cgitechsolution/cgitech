@@ -314,11 +314,22 @@ nav a.active {
 
 .client-logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 60px;
   flex-wrap: wrap;
-  gap: 40px;
-  opacity: 0.6;
+  margin-top: 40px;
+}
+
+.client-logos svg {
+  transition: 0.3s;
+  filter: grayscale(100%) opacity(60%);
+}
+
+.client-logos svg:hover {
+  fill: #ffc107;
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.1);
 }
 
 /* Blogs Section */
@@ -448,4 +459,6 @@ footer {
   .portfolio h2, .clients h2, .blogs h2, .contact h2 { font-size: 36px; }
   .form-row { flex-direction: column; }
   .footer-content { flex-direction: column; gap: 40px; }
+  .client-logos { gap: 40px; }
+  .client-logos svg { height: 30px; }
 }
