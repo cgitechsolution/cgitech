@@ -13,19 +13,30 @@
     <nav>
       <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Our Clients</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#" class="btn-contact">Contact US</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#clients">Our Clients</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#contact" class="btn-contact">Contact US</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-      <!-- Services Section -->
-  <section class="services">
+    <div class="hero-content">
+      <span class="welcome-badge">• WELCOME TO CGI TECH</span>
+      <h1>Turning Your Digital Ideas Into Reality</h1>
+      <p>We build premium websites, apps & digital solutions that scale your business.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Get Started →</a>
+        <a href="#services" class="btn-secondary">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
     <span class="section-badge">• OUR SERVICES</span>
     <h2>What We Offer</h2>
     <p class="section-subtitle">We provide premium digital solutions to scale your business</p>
@@ -52,9 +63,25 @@
   </section>
 
   <!-- About Us Section -->
-  <section class="about">
-      <!-- Portfolio Section -->
-  <section class="portfolio">
+  <section class="about" id="about">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1522071820481-0210a96a3c53" alt="About Us">
+    </div>
+    <div class="about-content">
+      <span class="section-badge">• ABOUT US</span>
+      <h2>Who We Are</h2>
+      <p>CGI Tech Solutions is a team of passionate developers and designers dedicated to building digital products that make an impact. We combine creativity with technology.</p>
+      <ul class="about-points">
+        <li>✓ 5+ Years Experience</li>
+        <li>✓ 50+ Projects Delivered</li>
+        <li>✓ 100% Client Satisfaction</li>
+      </ul>
+      <a href="#contact" class="btn-primary">Learn More →</a>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
     <span class="section-badge">• PORTFOLIO</span>
     <h2>Our Recent Work</h2>
     <p class="section-subtitle">Check out some of our amazing projects</p>
@@ -85,11 +112,11 @@
   </section>
 
   <!-- Our Clients Section -->
-  <section class="clients">
+  <section class="clients" id="clients">
     <span class="section-badge">• OUR CLIENTS</span>
     <h2>Trusted By Brands</h2>
     <div class="client-logos">
-       <img src="https://via.placeholder.com/150x80/6A0DAD/FFFFFF?text=Client+1" alt="Client 1">
+      <img src="https://via.placeholder.com/150x80/6A0DAD/FFFFFF?text=Client+1" alt="Client 1">
       <img src="https://via.placeholder.com/150x60/2d1656/ffc107?text=LOGO+2" alt="Client 2">
       <img src="https://via.placeholder.com/150x60/2d1656/ffc107?text=LOGO+3" alt="Client 3">
       <img src="https://via.placeholder.com/150x60/2d1656/ffc107?text=LOGO+4" alt="Client 4">
@@ -97,7 +124,7 @@
   </section>
 
   <!-- Blogs Section -->
-  <section class="blogs">
+  <section class="blogs" id="blogs">
     <span class="section-badge">• BLOGS</span>
     <h2>Latest Insights</h2>
     <div class="blog-cards">
@@ -111,7 +138,7 @@
         </div>
       </div>
       <div class="blog-card">
-           <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Blog 2">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Blog 2">
         <div class="blog-content">
           <span class="date">April 5, 2026</span>
           <h3>Why UI/UX Matters for ROI</h3>
@@ -123,7 +150,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact">
+  <section class="contact" id="contact">
     <span class="section-badge">• CONTACT US</span>
     <h2>Let's Build Together</h2>
     <p class="section-subtitle">Have a project in mind? Get in touch with us</p>
@@ -150,9 +177,9 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blogs</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blogs">Blogs</a></li>
         </ul>
       </div>
       <div class="footer-col">
