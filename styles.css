@@ -3,6 +3,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main, .container, .wrapper, .main-content {
   display: block !important;
   width: 100% !important;
@@ -119,6 +123,12 @@ nav a.active {
   color: #1a0b3d;
   text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
 }
 
 .btn-secondary {
@@ -128,7 +138,14 @@ nav a.active {
   color: white;
   text-decoration: none;
   font-weight: 500;
-}.section-badge {
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.section-badge {
   display: inline-block;
   border: 1px solid #ffc107;
   padding: 6px 18px;
@@ -177,6 +194,7 @@ nav a.active {
 .card:hover {
   transform: translateY(-10px);
   border-color: #ffc107;
+  box-shadow: 0 15px 30px rgba(255, 193, 7, 0.2);
 }
 
 .card .icon {
@@ -248,7 +266,9 @@ nav a.active {
   .services, .about { padding: 60px 20px; }
   .about { flex-direction: column; }
   .services h2, .about-content h2 { font-size: 36px; }
-}/* Portfolio Section */
+}
+
+/* Portfolio Section */
 .portfolio {
   padding: 100px 80px;
   background-color: #0d021f;
@@ -359,6 +379,12 @@ nav a.active {
   width: 380px;
   text-align: left;
   border: 1px solid #2d1656;
+  transition: 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  border-color: #ffc107;
 }
 
 .blog-card img {
