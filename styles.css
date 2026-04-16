@@ -671,6 +671,7 @@ footer {
 
 .marquee-text {
   display: flex;
+  width: max-content; /* ही लाईन नवीन आहे. ब्रेक फिक्स करेल */
   animation: marquee-scroll 30s linear infinite;
 }
 
@@ -679,18 +680,10 @@ footer {
 }
 
 .marquee-text span {
-  padding-right: 150px; /* दोन सेटमधला गॅप */
-}
-
-.marquee-text span:last-child {
-  padding-right: 0; /* लूपचा झटका जाणार नाही */
+  padding-right: 150px; /* प्रत्येक सेट मधला गॅप */
 }
 
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-66.666%); }
-}
-@keyframes marquee-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-66.666%); } /* ही लाईन बदल */
+  100% { transform: translateX(-50%); }
 }
