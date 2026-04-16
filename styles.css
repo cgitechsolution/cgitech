@@ -249,6 +249,10 @@ nav a.active {
 
 .about-image {
   flex: 1;
+}
+
+.about-image {
+  flex: 1;
   min-height: 400px;
 }
 
@@ -259,9 +263,9 @@ nav a.active {
   border-radius: 15px;
   object-fit: cover;
   background: #2d1656;
-  display: block;
+  display: block !important;
 }
-
+}
 .about-content {
   flex: 1;
 }
@@ -648,7 +652,7 @@ footer {
 }
 .dropdown-menu li a {
     padding: 12px 20px;
-    display: block;
+    display: block;+
     color: #a8b2d1;
     text-decoration: none;
 }
@@ -669,7 +673,7 @@ footer {
 
 .marquee-text {
   display: flex;
-  width: max-content;
+  width: max-content; /* ही लाईन नवीन आहे. ब्रेक फिक्स करेल */
   animation: marquee-scroll 30s linear infinite;
 }
 
@@ -678,7 +682,7 @@ footer {
 }
 
 .marquee-text span {
-  padding-right: 150px;
+  padding-right: 150px; /* प्रत्येक सेट मधला गॅप */
 }
 .logo {
   display: flex;
@@ -732,7 +736,8 @@ footer {
 .map-box {
   margin-top: 20px;
 }
-/* Footer 4-Column Layout */
+/* Footer 4-Column Layout Update */
+/* Footer 4-Column Layout | जुना .footer-content डिलीट करून हा टाक */
 .footer-content {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
@@ -836,6 +841,30 @@ footer {
   margin-top: 2px;
 }
 
+.map-box {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-contact li span {
+  color: #f59e0b;
+  margin-top: 2px;
+}
+
 .newsletter-title {
   margin-top: 25px;
 }
@@ -846,7 +875,7 @@ footer {
   line-height: 1.6;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive साठी */
 @media (max-width: 968px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
