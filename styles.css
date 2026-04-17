@@ -2220,21 +2220,21 @@ footer {
 /* FAQ Section - Site Color Match */
 .faq {
     padding: 80px 5%;
-    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); /* तुझ्या Hero सारखा डार्क ब्लू ग्रेडियंट */
+    background: linear-gradient(135deg, #0a4d68 0%, #088395 50%, #05bfdb 100%); /* फोटोतला टील ग्रेडियंट */
 }
 .faq .section-badge {
-    background: rgba(255, 77, 90, 0.15);
-    color: #ff4d5a;
-    border: 1px solid #ff4d5a;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .faq h2 {
-    color: white;
+    color: #fff; /* हेडिंग पांढरं */
     text-align: center;
     margin-bottom: 10px;
     font-size: 36px;
 }
 .faq .section-subtitle {
-    color: #b8c5d6; /* हलका निळसर ग्रे */
+    color: #e0f7fa; /* हलका सायन */
     text-align: center;
 }
 .faq-container {
@@ -2242,17 +2242,18 @@ footer {
     margin: 40px auto 0;
 }
 .faq-item {
-    background: rgba(255, 255, 255, 0.05); /* ग्लास इफेक्ट */
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1); /* ग्लास इफेक्ट */
+    backdrop-filter: blur(8px);
     margin-bottom: 15px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     overflow: hidden;
     transition: all 0.3s;
 }
 .faq-item:hover {
-    border-color: #ff4d5a;
-    background: rgba(255, 77, 90, 0.08);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    transform: translateY(-2px);
 }
 .faq-question {
     width: 100%;
@@ -2262,34 +2263,34 @@ footer {
     text-align: left;
     font-size: 16px;
     font-weight: 600;
-    color: white;
+    color: #fff; /* प्रश्न पांढरा */
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.faq-question:hover {
-    color: #ff4d5a;
-}
 .faq-icon {
     font-size: 24px;
     transition: transform 0.3s;
-    color: #ff4d5a;
+    color: #fff;
+    font-weight: 300;
 }
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.15); /* उत्तरासाठी डार्क शेड */
 }
 .faq-answer p {
     padding: 0 25px 20px;
-    color: #b8c5d6;
+    color: #e0f7fa; /* उत्तर हलका सायन */
     line-height: 1.6;
+    margin: 0;
 }
 .faq-item.active .faq-answer {
     max-height: 200px;
 }
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
+}
 }
