@@ -69,11 +69,19 @@ nav a { color: white; text-decoration: none; font-size: 14px; font-weight: 500; 
 nav a:hover { color: #ffc107; }
 nav a.active { border-bottom: 2px solid #ffc107; padding-bottom: 5px; }
 .btn-contact {
- 
+  background: #ffc107;  /* ही line नव्हती म्हणून दिसत नव्हतं */
   padding: 10px 20px;
   border-radius: 25px;
   color: #1a0b3d !important;
   font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-contact:hover {
+  background: #f59e0b;  /* Hover साठी पण add कर */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
 }
 .hero {
   height: 90vh;
@@ -1188,35 +1196,50 @@ footer {
   .whatsapp-float, .instagram-float { width: 45px; height: 45px; }
   .contact-social { flex-direction: column; align-items: center; }
 }
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
+/* Dropdown Menu CSS */
+.dropdown { 
+  position: relative; 
 }
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #112240;
-    min-width: 220px;
-    border-radius: 8px;
-    padding: 10px 0;
-    list-style: none;
-    z-index: 1000;
-    border: 1px solid #233554;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1a0b3d;
+  min-width: 240px;
+  border: 1px solid #2d1656;
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 1001;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-.dropdown:hover .dropdown-menu {
-    display: block;
+.dropdown:hover .dropdown-menu { 
+  display: block; 
 }
-.dropdown-menu li a {
-    padding: 12px 20px;
-    display: block;+
-    color: #a8b2d1;
-    text-decoration: none;
+.dropdown-menu li { 
+  list-style: none; 
 }
-.dropdown-menu li a:hover {
-    background: #2d1656;
-    color: #ffc107;
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.dropdown-menu a:hover { 
+  background: rgba(255, 193, 7, 0.1); 
+  color: #ffc107; 
+}
+
+/* Mobile मध्ये dropdown fix */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    background: #0d0d2b;
+    border: none;
+    box-shadow: none;
+  }
 }
 .top-bar {
   background: #f59e0b;
