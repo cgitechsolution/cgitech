@@ -1263,5 +1263,28 @@ footer{background:#1a0b3d!important;}
 footer .footer-social{display:flex!important;gap:20px!important;}
 footer .footer-social a{width:42px!important;height:42px!important;border-radius:50%!important;background:transparent!important;border:1.5px solid #ffffff40!important;color:#fff!important;}
 </style>
+        <!-- Firebase Script START -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script>
+  // तुझा Firebase Config इथे
+  const firebaseConfig = {
+    apiKey: "AIzaSyC...", // Firebase वरून घे
+    authDomain: "tuza-project.firebaseapp.com",
+    databaseURL: "https://tuza-project-default-rtdb.firebaseio.com", // 👈 ही महत्वाची line
+    projectId: "tuza-project",
+    storageBucket: "tuza-project.appspot.com",
+    messagingSenderId: "123456...",
+    appId: "1:123456...:web:abcdef"
+  };
+
+  // Firebase Initialize कर
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+</script>
+<!-- Firebase Script END -->
+</body>
+</html>
 </body>
 </html>
