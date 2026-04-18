@@ -2769,4 +2769,18 @@ footer {
 #faq .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
+/* Get Started Button Yellow कर */
+.hero .btn-primary {
+    background: #ffc107 !important; /* पिवळा background */
+    color: #1a0b3d !important; /* पर्पल text */
+    border: 2px solid #ffc107 !important;
+}
 
+/* Hover वर थोडा dark yellow */
+.hero .btn-primary:hover {
+    background: #ffb300 !important; 
+    color: #1a0b3d !important;
+    border-color: #ffb300 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
