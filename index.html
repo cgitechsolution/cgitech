@@ -1357,12 +1357,11 @@ footer .footer-social{display:flex!important;gap:20px!important;}
 footer .footer-social a{width:42px!important;height:42px!important;border-radius:50%!important;background:transparent!important;border:1.5px solid #ffffff40!important;color:#fff!important;}
 </style>
         <!-- Firebase Script START -->
-        <script>
+  <script>
   // 1. Contact Form Submit Track Karne
   document.querySelector('form')?.addEventListener('submit', function() {
     gtag('event', 'generate_lead', {
-      'event_category': 'Form',
-      'event_label': 'Contact Form Submit'
+      'method': 'Contact Form'
     });
   });
 
@@ -1370,15 +1369,19 @@ footer .footer-social a{width:42px!important;height:42px!important;border-radius
   document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(btn) {
     btn.addEventListener('click', function() {
       gtag('event', 'whatsapp_click', {
-        'event_category': 'Lead',
-        'event_label': 'WhatsApp Button'
+        'method': 'WhatsApp Button'
       });
     });
   });
 
-  // 3. Review Submit Track Karne - Firebase code madhe add kar
-  // Review save zalyavar hi line call kar:
-  // gtag('event', 'review_submit', {'event_category': 'Engagement','event_label': 'Live Review'});
+  // 3. Phone Number Click Track Karne
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      gtag('event', 'phone_click', {
+        'method': 'Phone Call'
+      });
+    });
+  });
 </script>
 </body>
 </html>
