@@ -207,8 +207,8 @@ body {
 <style>
 /* ===== 1. BODY LA EKCH COLOR FORCE KAR ===== */
 html, body, main, #__next, #root {
-    background: #2D1B69 !important;
-    background-color: #2D1B69 !important;
+    background: #1A0B2E !important;
+    background-color:#1A0B2E!important;
     background-image: none !important;
 }
 
@@ -221,7 +221,7 @@ html, body, main, #__next, #root {
     height: 100vh !important;
     z-index: 0 !important;
     pointer-events: none;
-    background: #2D1B69 !important;
+    background:#1A0B2E !important;
 }
 
 /* ===== 2. YELLOW/ORANGE LA KILL KAR - BOOTSTRAP OVERRIDE ===== */
@@ -341,6 +341,62 @@ body *::after {
         max-height: 40px !important;
     }
 }
+    <style>
+/* ===== HERO SECTION CHA TEXT WHITE + GLOW ===== */
+.hero h1,
+.hero h2,
+.hero h3,
+section h1,
+h1,
+h2 {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5) !important; /* Golden Glow */
+    position: relative !important;
+    z-index: 20 !important;
+    opacity: 1 !important;
+}
+
+/* HERO CHA BAKI TEXT PAN WHITE */
+.hero p, 
+.hero span,
+.hero .welcome-text {
+    color: #FFFFFF !important;
+    position: relative !important;
+    z-index: 20 !important;
+}
+
+/* "Top Website Agency" SPECIFIC FIX */
+.hero h1 {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+}
+
+/* BUTTONS GOLDEN BORDER MADHE */
+.hero .btn, 
+.hero button, 
+.get-started, 
+.our-work,
+.hero a[class*="btn"] {
+    border: 2px solid #FFD700 !important;
+    color: #FFD700 !important;
+    background: transparent !important;
+    position: relative !important;
+    z-index: 20 !important;
+}
+
+.hero .btn:hover {
+    background: #FFD700 !important;
+    color: #2D1B69 !important;
+}
+
+/* "CGI Tech Solutions" LOGO PAN WHITE */
+.navbar-brand, 
+.logo-text,
+header h1 {
+    color: #FFFFFF !important;
+}
+</style>
 </style>
 </head>
 <body>
