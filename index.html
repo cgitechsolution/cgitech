@@ -1755,15 +1755,31 @@ if(window.innerWidth < 768){
 </div>
 
 <script>
+// POPUP FAST TRIGGER - 3 SEC NANTR + 30% SCROLL
 let popupShown = false;
-document.addEventListener('mouseout', function(e) {
-  if(e.clientY < 10 && !popupShown && window.innerWidth > 768){
-    document.getElementById('exitPopup').style.display = 'flex';
-    popupShown = true;
-  }
+
+// 1. 3 Second nantar popup
+setTimeout(function() {
+    if (!popupShown) {
+        document.getElementById('exitPopup').style.display = 'flex';
+        popupShown = true;
+    }
+}, 3000); // 3000 = 3 second
+
+// 2. 30% Scroll kelyavar popup
+window.addEventListener('scroll', function() {
+    if (popupShown) return;
+    
+    let scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
+    if (scrollPercent > 30) {
+        document.getElementById('exitPopup').style.display = 'flex';
+        popupShown = true;
+    }
 });
+
 function closePopup(){
-  document.getElementById('exitPopup').style.display = 'none';
+    document.getElementById('exitPopup').style.display = 'none';
 }
 </script>
 <!-- EXIT POPUP END -->
