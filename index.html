@@ -398,12 +398,32 @@ header h1 {
 }
 </style>
 <style>
-/* ===== 1. ANIMATED MESH GRADIENT - SAP SARKHI ===== */
+/* ===== 1. MARQUEE + HEADER SOLID THEV ===== */
+.top-marquee {
+    background: #1A0B2E !important;
+    padding: 8px 0 !important;
+    position: relative !important;
+    z-index: 999 !important;
+}
+
+.top-marquee marquee {
+    color: #FFD700 !important;
+    font-weight: 600 !important;
+}
+
+header {
+    background: #1A0B2E !important;
+    position: relative !important;
+    z-index: 998 !important;
+}
+
+/* ===== 2. BODY LA ANIMATED GRADIENT ===== */
 body {
     background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #2D1B69) !important;
     background-size: 400% 400% !important;
     animation: meshGradient 20s ease infinite !important;
-    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 @keyframes meshGradient {
@@ -412,70 +432,58 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* ===== 2. FLOATING PARTICLES - CANVAS ADD KARAVA LAGEL ===== */
+/* ===== 3. PARTICLES - HEADER CHYA KHALI PASUN ===== */
 #particles-js {
     position: fixed !important;
-    top: 0 !important;
+    top: 0 !important; /* PURN PAGE COVER */
     left: 0 !important;
     width: 100% !important;
-    height: 100% !important;
-    z-index: 1 !important;
+    height: 100vh !important;
+    z-index: 1 !important; /* BODY VAR, CONTENT KHALI */
     pointer-events: none !important;
 }
 
-/* ===== 3. HERO TEXT WHITE + GLOW + FADE IN ===== */
-.hero h1 {
-    color: #FFFFFF !important;
-    font-size: 56px !important;
-    font-weight: 700 !important;
-    text-shadow: 0 0 30px rgba(192, 132, 252, 0.6) !important;
-    animation: fadeInUp 1s ease-out !important;
+/* ===== 4. SAGLE SECTION TRANSPARENT - HAICH PROBLEM HOTA ===== */
+section,
+.tech-stack-section,
+div[class*="section"],
+div[class*="container"],
+.bg-warning, .bg-primary, .bg-light, .bg-dark,
+[class*="bg-"],
+[style*="background"],
+[style*="background-color"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
     position: relative !important;
     z-index: 10 !important;
 }
 
-.hero p, .hero span {
-    color: rgba(255, 255, 255, 0.9) !important;
-    animation: fadeInUp 1s ease-out 0.3s both !important;
+/* ===== 5. CONTENT WHITE + VISIBLE ===== */
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+    color: #FFFFFF !important;
     position: relative !important;
     z-index: 10 !important;
+}
+
+h1 {
+    text-shadow: 0 0 30px rgba(192, 132, 252, 0.6) !important;
+}
+
+/* ===== 6. LOGO WHITE KAR ===== */
+.logo-item img {
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+}
+
+/* ===== 7. SCROLL ANIMATION ===== */
+section {
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== 4. BUTTONS HOVER ANIMATION ===== */
-.hero .btn, .get-started {
-    border: 2px solid #C084FC !important;
-    color: #C084FC !important;
-    background: rgba(192, 132, 252, 0.1) !important;
-    backdrop-filter: blur(10px) !important;
-    padding: 14px 32px !important;
-    border-radius: 50px !important;
-    transition: all 0.4s ease !important;
-    animation: fadeInUp 1s ease-out 0.6s both !important;
-}
-
-.hero .btn:hover {
-    background: #C084FC !important;
-    color: #1A0B2E !important;
-    box-shadow: 0 0 30px rgba(192, 132, 252, 0.8) !important;
-    transform: translateY(-2px) !important;
-}
-
-/* ===== 5. SAGLE SECTION TRANSPARENT ===== */
-section, .tech-stack-section, [class*="bg-"] {
-    background: transparent !important;
-    position: relative !important;
-    z-index: 10 !important;
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
