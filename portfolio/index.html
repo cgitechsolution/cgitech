@@ -53,6 +53,111 @@
       }
     }
     </script>
+    <style>
+    /* ===== WEB PROJECTS SLIDER ===== */
+.web-projects-slider {
+    padding: 80px 20px!important;
+    background: #1e1b4b!important;
+    text-align: center!important;
+}
+
+.projects-carousel {
+    position: relative!important;
+    max-width: 1000px!important;
+    margin: 50px auto!important;
+    height: 550px!important;
+}
+
+.project-slide {
+    display: none!important;
+    animation: fadeIn 1s ease!important;
+}
+
+.project-slide.active {
+    display: block!important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-mockup {
+    position: relative!important;
+    display: inline-block!important;
+    margin-bottom: 30px!important;
+}
+
+.laptop-img {
+    width: 600px!important;
+    max-width: 90%!important;
+}
+
+.mobile-img {
+    position: absolute!important;
+    width: 150px!important;
+    bottom: -20px!important;
+    right: 50px!important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3)!important;
+    border-radius: 20px!important;
+}
+
+.project-details h3 {
+    color: #ffffff!important;
+    font-size: 28px!important;
+    margin-bottom: 15px!important;
+}
+
+.project-details p {
+    color: #cbd5e1!important;
+    font-size: 16px!important;
+    margin: 8px 0!important;
+}
+
+.project-details strong {
+    color: #FFC107!important;
+}
+
+.tag {
+    background: #FFC107!important;
+    color: #0f172a!important;
+    padding: 6px 18px!important;
+    border-radius: 20px!important;
+    font-size: 13px!important;
+    font-weight: 700!important;
+    display: inline-block!important;
+    margin-top: 10px!important;
+}
+
+/* Dots */
+.slider-dots {
+    margin-top: 40px!important;
+}
+
+.dot {
+    height: 12px!important;
+    width: 12px!important;
+    margin: 0 8px!important;
+    background-color: #334155!important;
+    border-radius: 50%!important;
+    display: inline-block!important;
+    cursor: pointer!important;
+    transition: all 0.3s ease!important;
+}
+
+.dot.active,.dot:hover {
+    background-color: #FFC107!important;
+    transform: scale(1.3)!important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+   .laptop-img { width: 100%!important; }
+   .mobile-img { width: 100px!important; right: 10px!important; }
+   .projects-carousel { height: auto!important; }
+   .project-details h3 { font-size: 22px!important; }
+}
+        </style>
 </head>
 <body>
     <!-- Top Marquee Start -->
@@ -120,6 +225,61 @@ function filterPortfolio(category) {
 }
 </script>
 <!-- PORTFOLIO FILTER END -->
+    <!-- ===== WEB DEVELOPMENT PROJECTS CAROUSEL ===== -->
+<section class="web-projects-slider">
+    <div class="container">
+        <h2 class="section-title">Web Development Projects</h2>
+        <p class="section-subtitle">Responsive websites that drive results</p>
+
+        <div class="projects-carousel">
+            <div class="project-slide active">
+                <div class="project-mockup">
+                    <img src="/cgitech/laptop-mockup-1.png" alt="Laptop" class="laptop-img">
+                    <img src="/cgitech/mobile-mockup-1.png" alt="Mobile" class="mobile-img">
+                </div>
+                <div class="project-details">
+                    <h3>E-commerce Fashion Store</h3>
+                    <p><strong>Tech:</strong> Shopify + Custom Theme</p>
+                    <p><strong>Result:</strong> 2X Sales in 3 Months</p>
+                    <span class="tag">E-commerce</span>
+                </div>
+            </div>
+
+            <div class="project-slide">
+                <div class="project-mockup">
+                    <img src="/cgitech/laptop-mockup-2.png" alt="Laptop" class="laptop-img">
+                    <img src="/cgitech/mobile-mockup-2.png" alt="Mobile" class="mobile-img">
+                </div>
+                <div class="project-details">
+                    <h3>Restaurant Website</h3>
+                    <p><strong>Tech:</strong> WordPress + SEO</p>
+                    <p><strong>Result:</strong> #1 Rank on Google</p>
+                    <span class="tag">Food & Hospitality</span>
+                </div>
+            </div>
+
+            <div class="project-slide">
+                <div class="project-mockup">
+                    <img src="/cgitech/laptop-mockup-3.png" alt="Laptop" class="laptop-img">
+                    <img src="/cgitech/mobile-mockup-3.png" alt="Mobile" class="mobile-img">
+                </div>
+                <div class="project-details">
+                    <h3>Real Estate Portal</h3>
+                    <p><strong>Tech:</strong> Laravel + Custom CRM</p>
+                    <p><strong>Result:</strong> 300+ Leads/Month</p>
+                    <span class="tag">Real Estate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</section>
     <div class="portfolio-grid-pro">
         <!-- Project 1 -->
         <div class="portfolio-card">
@@ -213,9 +373,6 @@ function filterPortfolio(category) {
     </div>
 </section>
 <!-- PORTFOLIO SECTION END -->
-
-
-
  <footer>
     <div class="footer-content">
         <!-- Column 1: Logo + Social -->
@@ -306,6 +463,37 @@ function filterPortfolio(category) {
     <script>
 function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('active');
+}
+</script>
+    <script>
+// Auto Slide
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("project-slide");
+    let dots = document.getElementsByClassName("dot");
+    if(slides.length === 0) return;
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+
+    setTimeout(showSlides, 4000);
+}
+
+function currentSlide(n) {
+    slideIndex = n - 1;
+    showSlides();
 }
 </script>
     </body>
