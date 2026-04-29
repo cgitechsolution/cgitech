@@ -1,4 +1,87 @@
-html {
+
+/* ===== CIOLOOK SECTION - DARK BLUE FIX ===== */
+.media-coverage {
+    padding: 80px 20px !important;
+    background: #0f172a !important;
+    border-top: 1px solid #1e293b !important;
+}
+
+.media-coverage .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.media-grid {
+    display: grid !important;
+    grid-template-columns: 0.9fr 1.1fr !important;
+    gap: 60px !important;
+    align-items: flex-start !important;
+}
+
+.media-image {
+    background: #1e293b !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    border: 2px solid #FFC107 !important;
+}
+
+.media-logo {
+    background: #FFC107 !important;
+    color: #0f172a !important;
+    display: inline-block !important;
+    padding: 8px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+}
+
+.media-image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+}
+
+.img-caption {
+    color: #cbd5e1 !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+.media-content h3 {
+    font-size: 28px !important;
+    color: #FFC107 !important;
+    margin-bottom: 20px !important;
+    font-family: 'Playfair Display', serif !important;
+    line-height: 1.3 !important;
+}
+
+.media-content p {
+    color: #cbd5e1 !important;
+    line-height: 1.8 !important;
+    margin-bottom: 15px !important;
+    font-size: 16px !important;
+}
+
+.media-content .btn-primary {
+    margin-top: 20px !important;
+    display: inline-block !important;
+    background: #FFC107 !important;
+    color: #0f172a !important;
+    padding: 14px 32px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+}
+
+@media (max-width: 768px) {
+    .media-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+}html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
