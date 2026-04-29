@@ -1,3 +1,26 @@
+.about-grid {
+    display: grid !important;
+    grid-template-columns: 45% 55% !important;
+    gap: 50px !important;
+    align-items: flex-start !important;
+}
+
+.about-video iframe {
+    width: 100% !important;
+    height: 500px !important;
+    border-radius: 12px !important;
+    border: 3px solid #FFC107 !important;
+    box-shadow: 0 10px 40px rgba(255, 193, 7, 0.25) !important;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .about-video iframe {
+        height: 450px !important;
+    }
+}
 /* ===== CIOLOOK SECTION - DARK BLUE FIX ===== */
 .media-coverage {
     padding: 80px 20px !important;
